@@ -1,19 +1,25 @@
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // 👈 force Vercel to build a server app, not static export
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'standalone',
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "**" },
-      { protocol: "http", hostname: "**" }
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+      {
+        protocol: "http",
+        hostname: "**",
+      }
     ],
   },
   webpack(config, { isServer }) {
     if (isServer) {
+      // Ignore firestore.rules and backend.json from being watched
       const ignored = Array.isArray(config.watchOptions.ignored)
         ? config.watchOptions.ignored
         : [];

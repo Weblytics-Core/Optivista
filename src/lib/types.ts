@@ -29,3 +29,5 @@ export interface ImageDownload {
     imageUrl: string;
     downloadDate: any;
 }
+
+    
