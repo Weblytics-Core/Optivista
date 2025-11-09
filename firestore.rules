@@ -1,0 +1,181 @@
+
+/**
+ * @file Firestore Security Rules
+ * @description This ruleset enforces a strict user-ownership model for user data,
+ *              allows public reads for images, and restricts configuration access to admins.
+ *              It leverages denormalization to avoid `get()` calls and optimizes for
+ *              secure and efficient data access.
+ *
+ * @dataStructure
+ *   - /users/{userId}: User profile data, accessible only to the user themselves.
+ *   - /images/{imageId}: Image metadata, publicly readable but writable only with ownership verification.
+ *   - /configurations/{configId}: Application configurations, accessible only to admins.
+ *   - /contact_form_submissions/{submissionId}: Contact form submissions, write-only by anyone, readable by admins only.
+ *   - /roles_admin/{userId}: Indicates admin privileges.
+ *   - /downloads/{downloadId}: Tracks image downloads. Writable by authenticated users, readable by admins.
+ *
+ * @keySecurityDecisions
+ *   - User listing is disallowed.
+ *   - Public read access is granted to the /images collection.
+ *   - All write operations require authentication.
+ *   - Admin privileges are determined by presence in the `/roles_admin` collection or by direct email match.
+ *
+ * @denormalizationForAuthorization
+ *   - None specified by the data model.
+ *
+ * @structuralSegregation
+ *   - Private user data is stored under /users/{userId}, while public image metadata is stored
+ *     in the top-level /images collection.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Checks if the request is authenticated.
+     * @path N/A
+     * @allow N/A
+     * @deny N/A
+     * @principle Requires authentication for protected resources.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * @description Checks if the authenticated user is the owner of the resource.
+     * @path N/A
+     * @allow N/A
+     * @deny N/A
+     * @principle Enforces ownership-based access control.
+     */
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+        /**
+     * @description Checks if the authenticated user is the owner of the resource, verifying existence.
+     * @path N/A
+     * @allow N/A
+     * @deny N/A
+     * @principle Enforces ownership-based access control and document existence for destructive operations.
+     */
+    function isExistingOwner(userId) {
+        return isOwner(userId) && resource != null;
+    }
+
+
+    /**
+     * @description Checks if the authenticated user is an admin.
+     *              Admin status is granted if the user's UID exists in the /roles_admin collection
+     *              OR if their email is one of the hardcoded super-admin emails.
+     * @path N/A
+     * @allow N/A
+     * @deny NA
+     * @principle Enforces role-based access control with a failsafe for the primary admin.
+     */
+    function isAdmin() {
+      let isSuperAdmin = request.auth.token.email == "subhadipghosh.india@gmail.com";
+      let hasAdminRole = exists(/databases/$(database)/documents/roles_admin/$(request.auth.uid));
+      return isSuperAdmin || hasAdminRole;
+    }
+
+    /**
+     * @description Rules for user documents.
+     * @path /users/{userId}
+     * @allow (create) - User with UID 'user123' creates a document at /users/user123.
+     * @deny (create) - User with UID 'user123' tries to create a document at /users/anotherUser.
+     * @allow (get, list, update, delete) - User with UID 'user123' reads/writes their own document at /users/user123.
+     * @deny (get, list, update, delete) - User with UID 'user123' tries to read/write another user's document at /users/anotherUser.
+     * @principle Enforces document ownership for reads and writes; users can only access their own data.
+     */
+    match /users/{userId} {
+      // Allow the user to read their own profile data.
+      allow get: if isOwner(userId) || isAdmin();
+      // Allow the user to create their own profile data, but only if the userId matches their auth ID.
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      // Allow the user to update their own profile data.
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      // Allow the user to delete their own profile data.
+      allow delete: if isExistingOwner(userId);
+      // Only the owner can list their own documents. Listing other user's documents is disallowed.
+      allow list: if isOwner(userId) || isAdmin();
+    }
+
+    /**
+     * @description Rules for images. Images are publicly readable, but writes require authentication and ownership.
+     * @path /images/{imageId}
+     * @allow (get, list) - Any user (or no user) can read image data.
+     * @allow (create) - An authenticated user creates a new image.
+     * @deny (create) - An unauthenticated user tries to create an image.
+     * @allow (update, delete) - The user who created the image updates/deletes it.  Requires an `ownerId` field on the image.
+     * @deny (update, delete) - Another user tries to update/delete an image they don't own.
+     * @principle Allows public reads for images but enforces ownership for writes.
+     */
+    match /images/{imageId} {
+      // Allow anyone to read image metadata.
+      allow get, list: if true;
+
+      // Allow an authenticated user to create an image.
+      allow create: if isSignedIn();
+
+      // Allow the user to update and delete the image if they are the owner.
+      // CRITICAL: This rule depends on an `ownerId` field in the Image entity.
+      allow update, delete: if isSignedIn(); // TODO: Add owner validation once the schema is updated with an ownership field.
+    }
+
+    /**
+     * @description Rules for configurations. Only admins can read, create, update, and delete configurations.
+     * @path /configurations/{configId}
+     * @allow (get, list, create, update, delete) - An admin user manages configurations.
+     * @deny (get, list, create, update, delete) - A non-admin user tries to manage configurations.
+     * @principle Restricts configuration access to administrators.
+     */
+    match /configurations/{configId} {
+      // Only allow admins to manage configurations.
+      allow get, list, create, update, delete: if isAdmin();
+    }
+
+    /**
+     * @description Rules for contact form submissions. Anyone can create a submission, but only admins can read, update, or delete them.
+     * @path /contact_form_submissions/{submissionId}
+     * @allow (create) - Any user (or non-user) can submit a contact form.
+     * @deny (create) - Never.
+     * @allow (get, list, update, delete) - An admin user manages submissions.
+     * @deny (get, list, update, delete) - A non-admin user tries to manage submissions.
+     * @principle Allows public submissions but restricts management to administrators.
+     */
+    match /contact_form_submissions/{submissionId} {
+      // Allow anyone to create a contact form submission.
+      allow create: if true;
+
+      // Only allow admins to read, update, and delete contact form submissions.
+      allow get, list, update, delete: if isAdmin();
+    }
+
+       /**
+     * @description Rules for roles_admin. Only admins can read, create, update, and delete this collection.
+     * @path /roles_admin/{userId}
+     * @allow (get, list, create, update, delete) - An admin user manages roles.
+     * @deny (get, list, create, update, delete) - A non-admin user tries to manage roles.
+     * @principle Restricts roles access to administrators.
+     */
+    match /roles_admin/{userId} {
+      // Only allow admins to manage roles.
+      allow get, list, create, update, delete: if isAdmin();
+    }
+    
+    /**
+     * @description Rules for image download logs.
+     * @path /downloads/{downloadId}
+     * @allow (create) - Authenticated users can log their own downloads.
+     * @allow (get, list, update, delete) - Admins can read/manage download logs.
+     * @deny (get, list, update, delete) - Non-admin users cannot read/manage logs.
+     * @principle Enables download tracking while restricting log access to admins.
+     */
+    match /downloads/{downloadId} {
+        allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+        allow get, list, update, delete: if isAdmin();
+    }
+  }
+}

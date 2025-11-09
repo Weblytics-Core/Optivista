@@ -1,0 +1,307 @@
+
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user in the Optivista application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "User's first name."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "User's last name."
+        },
+        "role": {
+          "type": "string",
+          "description": "User's role (e.g., 'admin', 'user')."
+        },
+        "isAdmin": {
+          "type": "boolean",
+          "description": "Indicates whether the user has admin privileges."
+        },
+        "isVerified": {
+          "type": "boolean",
+          "description": "Indicates whether the user's email is verified."
+        },
+        "verificationToken": {
+          "type": "string",
+          "description": "Token used for email verification."
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "role",
+        "isAdmin",
+        "isVerified",
+        "verificationToken"
+      ]
+    },
+    "Image": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Image",
+      "type": "object",
+      "description": "Represents an image in the portfolio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the image."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the image."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the image."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the image."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "imageUrl"
+      ]
+    },
+    "Configuration": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Configuration",
+      "type": "object",
+      "description": "Represents a configuration setting for the application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the configuration setting."
+        },
+        "key": {
+          "type": "string",
+          "description": "Key of the configuration setting."
+        },
+        "value": {
+          "type": "string",
+          "description": "Value of the configuration setting. Stored as a stringified JSON."
+        }
+      },
+      "required": [
+        "id",
+        "key",
+        "value"
+      ]
+    },
+    "ContactFormSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactFormSubmission",
+      "type": "object",
+      "description": "Represents a contact form submission.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the contact form submission."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the submitter."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email of the submitter.",
+          "format": "email"
+        },
+        "message": {
+          "type": "string",
+          "description": "Message content."
+        },
+        "submissionDate": {
+          "type": "string",
+"description": "Date and time of submission.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "message",
+        "submissionDate"
+      ]
+    },
+    "ImageDownload": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ImageDownload",
+      "type": "object",
+      "description": "Represents a record of an image download by a user.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the download record."
+        },
+        "userId": {
+          "type": "string",
+          "description": "ID of the user who downloaded the image."
+        },
+        "userEmail": {
+          "type": "string",
+          "description": "Email of the user."
+        },
+        "userName": {
+          "type": "string",
+          "description": "Name of the user."
+        },
+        "imageId": {
+          "type": "string",
+          "description": "ID of the downloaded image."
+        },
+        "imageName": {
+          "type": "string",
+          "description": "Name of the downloaded image."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the downloaded image."
+        },
+        "downloadDate": {
+          "type": "string",
+          "description": "Timestamp of the download.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "userEmail",
+        "userName",
+        "imageId",
+        "imageName",
+        "imageUrl",
+        "downloadDate"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous",
+      "google.com"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profile information. 'id' property is equal to document ID. Includes 'isVerified' to track email verification status and 'verificationToken' for the verification process.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user, matching the Firebase Auth UID."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/images/{imageId}",
+        "definition": {
+          "entityName": "Image",
+          "schema": {
+            "$ref": "#/backend/entities/Image"
+          },
+          "description": "Stores image metadata and URLs.",
+          "params": [
+            {
+              "name": "imageId",
+              "description": "The unique identifier for the image."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/configurations/{configId}",
+        "definition": {
+          "entityName": "Configuration",
+          "schema": {
+            "$ref": "#/backend/entities/Configuration"
+          },
+          "description": "Stores key-value configuration settings for the application. Access restricted to admins.",
+          "params": [
+            {
+              "name": "configId",
+              "description": "The unique identifier for the configuration setting."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/contact_form_submissions/{submissionId}",
+        "definition": {
+          "entityName": "ContactFormSubmission",
+          "schema": {
+            "$ref": "#/backend/entities/ContactFormSubmission"
+          },
+          "description": "Stores contact form submissions.",
+          "params": [
+            {
+              "name": "submissionId",
+              "description": "The unique identifier for the contact form submission."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/roles_admin/{userId}",
+        "definition": {
+          "entityName": "RoleAdmin",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Collection to store UIDs of admin users. Existence in this collection grants admin privileges.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/downloads/{downloadId}",
+        "definition": {
+          "entityName": "ImageDownload",
+          "schema": {
+            "$ref": "#/backend/entities/ImageDownload"
+          },
+          "description": "Stores records of image downloads by users. Writable by authenticated users, readable by admins.",
+          "params": [
+            {
+              "name": "downloadId",
+              "description": "The unique identifier for the download record."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to optimize security, scalability, and debuggability, adhering to the core principles of Authorization Independence, Clarity of Intent, DBAC (Database-Based Access Control), and QAPs (Rules are not Filters).  Authorization Independence is achieved by avoiding `get()` calls in security rules through denormalization.  Specifically, for any subcollection whose access depends on a parent document's data, that parent data is copied directly into the subcollection documents. This ensures atomic operations and simplifies rule evaluation. Structural Segregation ensures that each collection has a homogeneous security posture, avoiding mixing data with different access requirements in the same collection.  Access Modeling follows consistent patterns: private user data uses path-based ownership, collaborative data employs membership maps, and global roles leverage existence checks. The structure also incorporates Explicit State Modeling using a `status` field, a Predictable Schema avoiding dynamic keys, and Radical Consistency in naming conventions.\n\n**Specific Recommendations Based on the App Requirements:**\n\n*   **Users:** User data is stored in `/users/{userId}`.  The `isVerified` field addresses the email verification requirement. The `verificationToken` is used to perform the verification. This allows each user document to be read or written only by the authenticated user with the matching `userId`, ensuring data privacy. Admin users are managed via existence in `/roles_admin/{userId}`.\n*   **Images:** Images are stored in a top-level `/images` collection. Access control can be implemented by associating images with user IDs (creator/owner). No denormalization is strictly required here unless more complex collaborative editing features are added in the future.\n*   **Configurations:** Configurations (key-value pairs) are stored in `/configurations/{configId}`. Access to this collection can be restricted to administrators using the `/roles_admin/{userId}` collection.\n*   **ContactFormSubmissions:** Contact form submissions are stored in `/contact_form_submissions/{submissionId}`.  This segregates contact data from other entities and simplifies security rules. Data in this collection is not directly editable by users so it can be secured via rules based on role.\n\n**QAPs (Rules Are Not Filters):**\n\n*   The chosen structure supports secure `list` operations. For example, listing images doesn't require filtering based on user role within the rule itself; instead, images can be filtered on the backend before being presented to the user based on their authentication status and role.  For private data like user profiles, listing is inherently secured by the path-based ownership (`/users/{userId}`)."
+  }
+}

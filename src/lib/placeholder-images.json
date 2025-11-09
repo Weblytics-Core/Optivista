@@ -1,0 +1,445 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "1",
+      "name": "Mountain Sunrise",
+      "description": "A breathtaking view of the sun rising over a misty mountain range.",
+      "url": "https://picsum.photos/seed/heromountain/1920/1080",
+      "category": "nature",
+      "aiHint": "mountain landscape"
+    },
+    {
+      "id": "2",
+      "name": "Urban Reflections",
+      "description": "A modern skyscraper reflecting the city lights on its glass facade.",
+      "url": "https://picsum.photos/seed/2/800/600",
+      "category": "architecture",
+      "aiHint": "city building"
+    },
+    {
+      "id": "3",
+      "name": "Serene Portrait",
+      "description": "A calm and thoughtful portrait of a person in natural light.",
+      "url": "https://picsum.photos/seed/3/600/800",
+      "category": "portrait",
+      "aiHint": "woman face"
+    },
+    {
+      "id": "4",
+      "name": "Liquid Motion",
+      "description": "An abstract close-up of colorful liquids mixing together.",
+      "url": "https://picsum.photos/seed/4/800/600",
+      "category": "abstract",
+      "aiHint": "abstract colors"
+    },
+    {
+      "id": "5",
+      "name": "Forest Path",
+      "description": "A tranquil path winding through a dense, green forest.",
+      "url": "https://picsum.photos/seed/5/800/600",
+      "category": "nature",
+      "aiHint": "forest path"
+    },
+    {
+      "id": "6",
+      "name": "Historic Archway",
+      "description": "The intricate details of a weathered, historic stone archway.",
+      "url": "https://picsum.photos/seed/6/600/800",
+      "category": "architecture",
+      "aiHint": "ancient ruins"
+    },
+    {
+      "id": "7",
+      "name": "Desert Dunes",
+      "description": "Golden sand dunes stretching under a clear blue sky.",
+      "url": "https://picsum.photos/seed/7/800/600",
+      "category": "nature",
+      "aiHint": "desert landscape"
+    },
+    {
+      "id": "8",
+      "name": "Minimalist Interior",
+      "description": "A clean, minimalist interior with a single piece of modern furniture.",
+      "url": "https://picsum.photos/seed/8/800/600",
+      "category": "architecture",
+      "aiHint": "minimalist room"
+    },
+    {
+      "id": "9",
+      "name": "Candid Smile",
+      "description": "A joyful, candid shot of a person smiling.",
+      "url": "https://picsum.photos/seed/9/600/800",
+      "category": "portrait",
+      "aiHint": "smiling person"
+    },
+    {
+      "id": "10",
+      "name": "Coastal Waves",
+      "description": "Powerful ocean waves crashing against a rocky shoreline.",
+      "url": "https://picsum.photos/seed/10/800/600",
+      "category": "nature",
+      "aiHint": "ocean waves"
+    },
+    {
+      "id": "11",
+      "name": "Geometric Patterns",
+      "description": "A mesmerizing abstract photo of repeating geometric shapes.",
+      "url": "https://picsum.photos/seed/11/800/600",
+      "category": "abstract",
+      "aiHint": "geometric abstract"
+    },
+    {
+      "id": "12",
+      "name": "Stairway to Nowhere",
+      "description": "A spiral staircase in an abandoned building, creating a sense of mystery.",
+      "url": "https://picsum.photos/seed/12/600/800",
+      "category": "architecture",
+      "aiHint": "spiral staircase"
+    },
+    {
+      "id": "13",
+      "name": "Northern Lights",
+      "description": "The vibrant colors of the Aurora Borealis in the night sky.",
+      "url": "https://picsum.photos/seed/13/800/600",
+      "category": "nature",
+      "aiHint": "aurora borealis"
+    },
+    {
+      "id": "14",
+      "name": "Ink in Water",
+      "description": "Abstract capture of black ink diffusing in clear water.",
+      "url": "https://picsum.photos/seed/14/800/600",
+      "category": "abstract",
+      "aiHint": "ink water"
+    },
+    {
+      "id": "15",
+      "name": "Elder's Wisdom",
+      "description": "A powerful portrait capturing the wisdom in an elderly person's eyes.",
+      "url": "https://picsum.photos/seed/15/600/800",
+      "category": "portrait",
+      "aiHint": "old man"
+    },
+    {
+      "id": "16",
+      "name": "Suspension Bridge",
+      "description": "A long suspension bridge disappearing into the fog.",
+      "url": "https://picsum.photos/seed/16/800/600",
+      "category": "architecture",
+      "aiHint": "foggy bridge"
+    },
+    {
+      "id": "17",
+      "name": "Cosmic Cloud",
+      "description": "A colorful nebula in deep space.",
+      "url": "https://picsum.photos/seed/17/800/600",
+      "category": "abstract",
+      "aiHint": "galaxy space"
+    },
+    {
+      "id": "18",
+      "name": "Autumn Lane",
+      "description": "A road covered in autumn leaves.",
+      "url": "https://picsum.photos/seed/18/800/600",
+      "category": "nature",
+      "aiHint": "autumn road"
+    },
+    {
+      "id": "19",
+      "name": "Future City",
+      "description": "A futuristic city skyline at night.",
+      "url": "https://picsum.photos/seed/19/800/600",
+      "category": "architecture",
+      "aiHint": "futuristic city"
+    },
+    {
+      "id": "20",
+      "name": "Playful Child",
+      "description": "A child laughing and playing outdoors.",
+      "url": "https://picsum.photos/seed/20/600/800",
+      "category": "portrait",
+      "aiHint": "happy child"
+    },
+    {
+      "id": "21",
+      "name": "Fractal Art",
+      "description": "A complex and colorful fractal design.",
+      "url": "https://picsum.photos/seed/21/800/600",
+      "category": "abstract",
+      "aiHint": "fractal art"
+    },
+    {
+      "id": "22",
+      "name": "Glacier Bay",
+      "description": "Icebergs floating in a calm glacial bay.",
+      "url": "https://picsum.photos/seed/22/800/600",
+      "category": "nature",
+      "aiHint": "glacier ice"
+    },
+    {
+      "id": "23",
+      "name": "Brutalist Design",
+      "description": "The stark and imposing facade of a brutalist building.",
+      "url": "https://picsum.photos/seed/23/800/600",
+      "category": "architecture",
+      "aiHint": "brutalist building"
+    },
+    {
+      "id": "24",
+      "name": "Musician's Hands",
+      "description": "Close-up of a musician's hands playing a guitar.",
+      "url": "https://picsum.photos/seed/24/600/800",
+      "category": "portrait",
+      "aiHint": "playing guitar"
+    },
+    {
+      "id": "25",
+      "name": "Paint Splash",
+      "description": "A dynamic splash of multi-colored paint.",
+      "url": "https://picsum.photos/seed/25/800/600",
+      "category": "abstract",
+      "aiHint": "paint splash"
+    },
+    {
+      "id": "26",
+      "name": "Volcanic Fields",
+      "description": "The stark landscape of a volcanic field.",
+      "url": "https://picsum.photos/seed/26/800/600",
+      "category": "nature",
+      "aiHint": "volcanic rock"
+    },
+    {
+      "id": "27",
+      "name": "Gothic Cathedral",
+      "description": "The towering spires of a gothic cathedral.",
+      "url": "https://picsum.photos/seed/27/600/800",
+      "category": "architecture",
+      "aiHint": "gothic church"
+    },
+    {
+      "id": "28",
+      "name": "Street Performer",
+      "description": "A street performer captivating an audience.",
+      "url": "https://picsum.photos/seed/28/600/800",
+      "category": "portrait",
+      "aiHint": "street artist"
+    },
+    {
+      "id": "29",
+      "name": "Light Painting",
+      "description": "Abstract light trails created with long exposure.",
+      "url": "https://picsum.photos/seed/29/800/600",
+      "category": "abstract",
+      "aiHint": "light trails"
+    },
+    {
+      "id": "30",
+      "name": "Tropical Beach",
+      "description": "A pristine tropical beach with white sand and clear water.",
+      "url": "https://picsum.photos/seed/30/800/600",
+      "category": "nature",
+      "aiHint": "tropical beach"
+    },
+    {
+      "id": "31",
+      "name": "Skyscraper Worms Eye",
+      "description": "Looking up at towering skyscrapers from below.",
+      "url": "https://picsum.photos/seed/31/600/800",
+      "category": "architecture",
+      "aiHint": "skyscraper view"
+    },
+    {
+      "id": "32",
+      "name": "Athlete in Motion",
+      "description": "A runner captured in a dynamic motion blur.",
+      "url": "https://picsum.photos/seed/32/800/600",
+      "category": "portrait",
+      "aiHint": "runner motion"
+    },
+    {
+      "id": "33",
+      "name": "Macro Water Droplet",
+      "description": "A macro shot of a water droplet on a leaf.",
+      "url": "https://picsum.photos/seed/33/800/600",
+      "category": "nature",
+      "aiHint": "water drop"
+    },
+    {
+      "id": "34",
+      "name": "Smoke Art",
+      "description": "Billowing smoke creating abstract shapes.",
+      "url": "https://picsum.photos/seed/34/800/600",
+      "category": "abstract",
+      "aiHint": "smoke abstract"
+    },
+    {
+      "id": "35",
+      "name": "Modern Bridge",
+      "description": "The clean lines of a modern suspension bridge.",
+      "url": "https://picsum.photos/seed/35/800/600",
+      "category": "architecture",
+      "aiHint": "modern bridge"
+    },
+    {
+      "id": "36",
+      "name": "Dancer's Pose",
+      "description": "A graceful dancer holding a dramatic pose.",
+      "url": "https://picsum.photos/seed/36/600/800",
+      "category": "portrait",
+      "aiHint": "ballet dancer"
+    },
+    {
+      "id": "37",
+      "name": "Canyon Vista",
+      "description": "A vast canyon stretching out to the horizon.",
+      "url": "https://picsum.photos/seed/37/800/600",
+      "category": "nature",
+      "aiHint": "grand canyon"
+    },
+    {
+      "id": "38",
+      "name": "Oil on Canvas",
+      "description": "An abstract texture of thick oil paint on canvas.",
+      "url": "https://picsum.photos/seed/38/800/600",
+      "category": "abstract",
+      "aiHint": "paint texture"
+    },
+    {
+      "id": "39",
+      "name": "Rooftop Garden",
+      "description": "A lush garden on the rooftop of a city building.",
+      "url": "https://picsum.photos/seed/39/800/600",
+      "category": "architecture",
+      "aiHint": "rooftop garden"
+    },
+    {
+      "id": "40",
+      "name": "Reflective Gaze",
+      "description": "A pensive portrait of a person looking into the distance.",
+      "url": "https://picsum.photos/seed/40/600/800",
+      "category": "portrait",
+      "aiHint": "thoughtful person"
+    },
+    {
+      "id": "41",
+      "name": "Misty Waterfall",
+      "description": "A powerful waterfall shrouded in mist.",
+      "url": "https://picsum.photos/seed/mistywaterfall/1920/1080",
+      "category": "nature",
+      "aiHint": "waterfall mist"
+    },
+    {
+      "id": "42",
+      "name": "Digital Glitch",
+      "description": "An abstract image representing a digital glitch.",
+      "url": "https://picsum.photos/seed/42/800/600",
+      "category": "abstract",
+      "aiHint": "glitch art"
+    },
+    {
+      "id": "43",
+      "name": "Ancient Temple",
+      "description": "The ruins of an ancient temple at sunset.",
+      "url": "https://picsum.photos/seed/43/800/600",
+      "category": "architecture",
+      "aiHint": "ancient temple"
+    },
+    {
+      "id": "44",
+      "name": "Elder's Hands",
+      "description": "A close-up showing the weathered hands of an elder.",
+      "url": "https://picsum.photos/seed/44/800/600",
+      "category": "portrait",
+      "aiHint": "old hands"
+    },
+    {
+      "id": "45",
+      "name": "Lightning Storm",
+      "description": "A dramatic lightning strike over a dark landscape.",
+      "url": "https://picsum.photos/seed/45/800/600",
+      "category": "nature",
+      "aiHint": "lightning storm"
+    },
+    {
+      "id": "46",
+      "name": "Cracked Paint",
+      "description": "An abstract close-up of cracked and peeling paint.",
+      "url": "https://picsum.photos/seed/46/800/600",
+      "category": "abstract",
+      "aiHint": "cracked paint"
+    },
+    {
+      "id": "47",
+      "name": "Subway Tunnel",
+      "description": "A view down a long, empty subway tunnel.",
+      "url": "https://picsum.photos/seed/47/800/600",
+      "category": "architecture",
+      "aiHint": "subway tunnel"
+    },
+    {
+      "id": "48",
+      "name": "Fire Performer",
+      "description": "A portrait of a performer manipulating fire.",
+      "url": "https://picsum.photos/seed/48/600/800",
+      "category": "portrait",
+      "aiHint": "fire dancer"
+    },
+    {
+      "id": "49",
+      "name": "Redwood Canopy",
+      "description": "Looking up at the canopy of giant redwood trees.",
+      "url": "https://picsum.photos/seed/49/600/800",
+      "category": "nature",
+      "aiHint": "redwood forest"
+    },
+    {
+      "id": "50",
+      "name": "Rusted Metal",
+      "description": "An abstract texture of rusted metal.",
+      "url": "https://picsum.photos/seed/50/800/600",
+      "category": "abstract",
+      "aiHint": "rust texture"
+    },
+    {
+      "id": "51",
+      "name": "Library Aisles",
+      "description": "Rows of books in a grand old library.",
+      "url": "https://picsum.photos/seed/51/800/600",
+      "category": "architecture",
+      "aiHint": "library books"
+    },
+    {
+      "id": "52",
+      "name": "Silhouette",
+      "description": "A striking silhouette of a person against a sunset.",
+      "url": "https://picsum.photos/seed/52/600/800",
+      "category": "portrait",
+      "aiHint": "sunset silhouette"
+    },
+    {
+      "id": "53",
+      "name": "Crystal Cave",
+      "description": "Inside a sparkling crystal cave.",
+      "url": "https://picsum.photos/seed/53/800/600",
+      "category": "nature",
+      "aiHint": "crystal cave"
+    },
+    {
+      "id": "54",
+      "name": "Watercolor Blend",
+      "description": "An abstract blend of watercolor paints.",
+      "url": "https://picsum.photos/seed/54/800/600",
+      "category": "abstract",
+      "aiHint": "watercolor texture"
+    },
+    {
+      "id": "55",
+      "name": "Industrial Loft",
+      "description": "The interior of a spacious industrial loft apartment.",
+      "url": "https://picsum.photos/seed/55/800/600",
+      "category": "architecture",
+      "aiHint": "industrial loft"
+    }
+  ]
+}
