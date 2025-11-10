@@ -160,7 +160,7 @@ export default function SignupPage() {
         <div className="absolute inset-0 bg-gradient-to-l from-background via-background/50 to-transparent" />
       </div>
        <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <Card className="mx-auto w-full max-w-sm border-0 shadow-none sm:border-2 sm:shadow-lg">
+        <Card className="mx-auto w-full max-w-sm border-0 shadow-none sm:border sm:shadow-lg">
           <CardHeader className="space-y-1 text-center">
             <CardTitle className="text-3xl font-bold font-headline">Create an Account</CardTitle>
             <CardDescription>
@@ -256,4 +256,3 @@ export default function SignupPage() {
     </div>
   );
 }
-    

@@ -248,15 +248,15 @@ export default function AdminImagesPage() {
   return (
     <>
       <Card>
-        <CardHeader className="flex flex-row items-center justify-between gap-4">
+        <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4">
           <div>
               <CardTitle className="font-headline">Images</CardTitle>
               <CardDescription>Manage your website's photos here.</CardDescription>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="outline" disabled={isSeeding}>
+                <Button variant="outline" disabled={isSeeding} className="w-full sm:w-auto">
                   <UploadCloud className="mr-2 h-4 w-4" />
                   {isSeeding ? 'Seeding...' : 'Seed Database'}
                 </Button>
@@ -274,7 +274,7 @@ export default function AdminImagesPage() {
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
-            <Button onClick={() => setIsAddDialogOpen(true)}>
+            <Button onClick={() => setIsAddDialogOpen(true)} className="w-full sm:w-auto">
               <PlusCircle className="mr-2 h-4 w-4" />
               Add Image
             </Button>

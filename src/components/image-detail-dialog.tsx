@@ -131,7 +131,7 @@ export function ImageDetailDialog({ images, initialIndex, onClose }: ImageDetail
 
   return (
     <Dialog open={currentIndex !== null} onOpenChange={(isOpen) => !isOpen && onClose()}>
-      <DialogContent className="max-w-6xl w-11/12 p-0 h-[90vh] flex flex-col">
+      <DialogContent className="max-w-6xl w-11/12 p-0 h-[90svh] flex flex-col">
         <DialogHeader className="sr-only">
           <DialogTitle>{image.name}</DialogTitle>
         </DialogHeader>
@@ -146,29 +146,29 @@ export function ImageDetailDialog({ images, initialIndex, onClose }: ImageDetail
               />
 
             {canGoPrev && (
-                <Button variant="ghost" size="icon" onClick={handlePrev} className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-black/30 hover:bg-black/50 text-white">
+                <Button variant="ghost" size="icon" onClick={handlePrev} className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-black/30 hover:bg-black/50 text-white">
                     <ArrowLeft className="h-6 w-6" />
                 </Button>
             )}
             {canGoNext && (
-                 <Button variant="ghost" size="icon" onClick={handleNext} className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-black/30 hover:bg-black/50 text-white">
+                 <Button variant="ghost" size="icon" onClick={handleNext} className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-black/30 hover:bg-black/50 text-white">
                     <ArrowRight className="h-6 w-6" />
                 </Button>
             )}
-             <Button variant="ghost" size="icon" onClick={onClose} className="absolute top-4 right-4 h-10 w-10 rounded-full bg-black/30 hover:bg-black/50 text-white">
+             <Button variant="ghost" size="icon" onClick={onClose} className="absolute top-2 right-2 sm:top-4 sm:right-4 h-10 w-10 rounded-full bg-black/30 hover:bg-black/50 text-white">
                  <X className="h-6 w-6" />
              </Button>
         </div>
 
-        <div className="p-6 bg-card border-t shrink-0">
+        <div className="p-4 sm:p-6 bg-card border-t shrink-0">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-            <div className='max-w-prose'>
-              <h2 className="text-2xl font-headline font-bold">{image.name}</h2>
+             <div className='max-w-prose order-2 sm:order-1'>
+              <h2 className="text-xl sm:text-2xl font-headline font-bold">{image.name}</h2>
               <p className="text-muted-foreground capitalize text-sm">{image.category}</p>
-              <p className="text-foreground/80 mt-2">{image.description}</p>
+              <p className="text-foreground/80 mt-2 text-sm sm:text-base">{image.description}</p>
             </div>
             {user && (
-              <Button onClick={handleDownload}>
+              <Button onClick={handleDownload} className="order-1 sm:order-2 w-full sm:w-auto">
                 <Download className="mr-2 h-4 w-4" />
                 Download
               </Button>

@@ -233,7 +233,7 @@ export default function LoginPage() {
   return (
     <div className="w-full min-h-[calc(100vh-4rem)] lg:grid lg:grid-cols-2">
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <Card className="mx-auto w-full max-w-sm border-0 shadow-none sm:border-2 sm:shadow-lg">
+        <Card className="mx-auto w-full max-w-sm border-0 shadow-none sm:border sm:shadow-lg">
           <CardHeader className="space-y-1 text-center">
             <CardTitle className="text-3xl font-bold font-headline">Login</CardTitle>
             <CardDescription>
@@ -335,6 +335,3 @@ export default function LoginPage() {
     </div>
   );
 }
-    
-
-    
