@@ -115,7 +115,7 @@ export default function AdminImagesPage() {
 
         // Phase 2: Add all new images in a batch.
         const batch = writeBatch(firestore);
-        const imagesToSeed = placeholderImageData.placeholderImages as Omit<SiteImage, 'price'>[];
+        const imagesToSeed = placeholderImageData.placeholderImages;
         
         imagesToSeed.forEach(imageData => {
             // Use the id from the JSON file for consistency if available, otherwise generate a new one
@@ -248,7 +248,7 @@ export default function AdminImagesPage() {
   return (
     <>
       <Card>
-        <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4">
+        <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
               <CardTitle className="font-headline">Images</CardTitle>
               <CardDescription>Manage your website's photos here.</CardDescription>
