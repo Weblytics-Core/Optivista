@@ -8,37 +8,57 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { useFirestore, addDocumentNonBlocking } from "@/firebase";
+import { collection, serverTimestamp } from "firebase/firestore";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const [isSuccess, setIsSuccess] = useState(false);
+  const firestore = useFirestore();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-    setIsSuccess(false);
 
     const formData = new FormData(event.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    if (!firestore) {
+      toast({
+        title: "Uh oh! Something went wrong.",
+        description: "Database service is not available. Please try again later.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+    
+    if (!name || !email || !message) {
+        toast({
+            title: "Missing Fields",
+            description: "Please fill out all required fields.",
+            variant: "destructive"
+        });
+        setIsSubmitting(false);
+        return;
+    }
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        body: formData,
+      const submissionsCollectionRef = collection(firestore, 'contact_form_submissions');
+      await addDocumentNonBlocking(submissionsCollectionRef, {
+        name,
+        email,
+        message,
+        submissionDate: serverTimestamp(),
       });
 
-      const result = await response.json();
-
-      if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. We will get back to you soon.",
-        });
-        setIsSuccess(true);
-        (event.target as HTMLFormElement).reset();
-      } else {
-        throw new Error(result.message || 'An error occurred.');
-      }
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. We will get back to you soon.",
+      });
+      (event.target as HTMLFormElement).reset();
     } catch (error: any) {
       toast({
         title: "Uh oh! Something went wrong.",

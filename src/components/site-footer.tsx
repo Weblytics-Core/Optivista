@@ -25,7 +25,7 @@ export function SiteFooter() {
           <div className="space-y-4 lg:col-span-2">
             <h4 className="font-headline text-lg font-semibold tracking-wide">Optivista</h4>
             <p className="text-muted-foreground">
-              A modern photography portfolio to showcase and sell your work.
+              A modern photography portfolio to showcase and sell your work. Built with Next.js and Firebase.
             </p>
             <div className="flex space-x-4 pt-2">
                 <Link href="https://twitter.com/subhadipdotcom/" className="text-muted-foreground hover:text-foreground">
