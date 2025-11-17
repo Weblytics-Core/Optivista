@@ -1,11 +1,10 @@
-
 {
   "placeholderImages": [
     {
       "id": "1",
       "name": "Mountain Sunrise",
       "description": "A breathtaking view of the sun rising over a misty mountain range.",
-      "url": "https://picsum.photos/seed/heromountain/1920/1080",
+      "url": "https://drive.google.com/uc?export=view&id=10ebKjm_dVud8ySPuQzfPaaKfcFoQIHPW",
       "category": "nature",
       "aiHint": "mountain landscape"
     },
@@ -13,7 +12,7 @@
       "id": "2",
       "name": "Urban Reflections",
       "description": "A modern skyscraper reflecting the city lights on its glass facade.",
-      "url": "https://picsum.photos/seed/2/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=11j5Ynm4sCW62Zqd17NI5eIraDTAU-tWt",
       "category": "architecture",
       "aiHint": "city building"
     },
@@ -21,7 +20,7 @@
       "id": "3",
       "name": "Serene Portrait",
       "description": "A calm and thoughtful portrait of a person in natural light.",
-      "url": "https://picsum.photos/seed/3/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=11yvBpo7GGzl0sTm8NEjLK4qahTOj5-wa",
       "category": "portrait",
       "aiHint": "woman face"
     },
@@ -29,7 +28,7 @@
       "id": "4",
       "name": "Liquid Motion",
       "description": "An abstract close-up of colorful liquids mixing together.",
-      "url": "https://picsum.photos/seed/4/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=125F5EDqCameZOHSBdfr57vToUvJBFXrF",
       "category": "abstract",
       "aiHint": "abstract colors"
     },
@@ -37,7 +36,7 @@
       "id": "5",
       "name": "Forest Path",
       "description": "A tranquil path winding through a dense, green forest.",
-      "url": "https://picsum.photos/seed/5/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=12kmZCcY58W18i-_y5RcdyqYY7307yUcQ",
       "category": "nature",
       "aiHint": "forest path"
     },
@@ -45,7 +44,7 @@
       "id": "6",
       "name": "Historic Archway",
       "description": "The intricate details of a weathered, historic stone archway.",
-      "url": "https://picsum.photos/seed/6/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=14X6wu_7Za527X56bXaczSu6xartMyHL0",
       "category": "architecture",
       "aiHint": "ancient ruins"
     },
@@ -53,7 +52,7 @@
       "id": "7",
       "name": "Desert Dunes",
       "description": "Golden sand dunes stretching under a clear blue sky.",
-      "url": "https://picsum.photos/seed/7/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=15IJ6biI2mQiN7mnNcdmx8W7f9CHuIHcJ",
       "category": "nature",
       "aiHint": "desert landscape"
     },
@@ -61,7 +60,7 @@
       "id": "8",
       "name": "Minimalist Interior",
       "description": "A clean, minimalist interior with a single piece of modern furniture.",
-      "url": "https://picsum.photos/seed/8/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=15Ph-0yQbf_rOle-HMPXIv9vgwFEeJe_E",
       "category": "architecture",
       "aiHint": "minimalist room"
     },
@@ -69,7 +68,7 @@
       "id": "9",
       "name": "Candid Smile",
       "description": "A joyful, candid shot of a person smiling.",
-      "url": "https://picsum.photos/seed/9/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=173bk07VYaY15cjtJowGyYQNz5YK0PD02",
       "category": "portrait",
       "aiHint": "smiling person"
     },
@@ -77,7 +76,7 @@
       "id": "10",
       "name": "Coastal Waves",
       "description": "Powerful ocean waves crashing against a rocky shoreline.",
-      "url": "https://picsum.photos/seed/10/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=175JRzmjq1kTj9Buci7kXzn79OZtfTUp_",
       "category": "nature",
       "aiHint": "ocean waves"
     },
@@ -85,7 +84,7 @@
       "id": "11",
       "name": "Geometric Patterns",
       "description": "A mesmerizing abstract photo of repeating geometric shapes.",
-      "url": "https://picsum.photos/seed/11/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=17CzkT_nMrOjxKRe3E_Plq3xFjP3Qin4z",
       "category": "abstract",
       "aiHint": "geometric abstract"
     },
@@ -93,7 +92,7 @@
       "id": "12",
       "name": "Stairway to Nowhere",
       "description": "A spiral staircase in an abandoned building, creating a sense of mystery.",
-      "url": "https://picsum.photos/seed/12/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1ACRYxQ2LzoH_42NvlA814j1Twk5sNHBp",
       "category": "architecture",
       "aiHint": "spiral staircase"
     },
@@ -101,7 +100,7 @@
       "id": "13",
       "name": "Northern Lights",
       "description": "The vibrant colors of the Aurora Borealis in the night sky.",
-      "url": "https://picsum.photos/seed/13/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1A_wbCRSKCPnqwZ12BAukkvSOxLEphCLr",
       "category": "nature",
       "aiHint": "aurora borealis"
     },
@@ -109,7 +108,7 @@
       "id": "14",
       "name": "Ink in Water",
       "description": "Abstract capture of black ink diffusing in clear water.",
-      "url": "https://picsum.photos/seed/14/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1BkLH0INRJBvV-YnW5Fe82S9pRZltjSQn",
       "category": "abstract",
       "aiHint": "ink water"
     },
@@ -117,7 +116,7 @@
       "id": "15",
       "name": "Elder's Wisdom",
       "description": "A powerful portrait capturing the wisdom in an elderly person's eyes.",
-      "url": "https://picsum.photos/seed/15/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1CRXRsRxLfsT0BAlkJdyDUnr9UsMu3372",
       "category": "portrait",
       "aiHint": "old man"
     },
@@ -125,7 +124,7 @@
       "id": "16",
       "name": "Suspension Bridge",
       "description": "A long suspension bridge disappearing into the fog.",
-      "url": "https://picsum.photos/seed/16/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1EPzRACeZFtkEaoiAyNqgzysxwhNLuOp7",
       "category": "architecture",
       "aiHint": "foggy bridge"
     },
@@ -133,7 +132,7 @@
       "id": "17",
       "name": "Cosmic Cloud",
       "description": "A colorful nebula in deep space.",
-      "url": "https://picsum.photos/seed/17/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1LIo4ZspacekWp6VRGO9VNMcQA6gO7xop",
       "category": "abstract",
       "aiHint": "galaxy space"
     },
@@ -141,7 +140,7 @@
       "id": "18",
       "name": "Autumn Lane",
       "description": "A road covered in autumn leaves.",
-      "url": "https://picsum.photos/seed/18/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1LQP7gr2ow428f21Zn--ENP0nZTMgKy3I",
       "category": "nature",
       "aiHint": "autumn road"
     },
@@ -149,7 +148,7 @@
       "id": "19",
       "name": "Future City",
       "description": "A futuristic city skyline at night.",
-      "url": "https://picsum.photos/seed/19/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1MB1dwnAAHw2K702pGn3zgthX078gVk9n",
       "category": "architecture",
       "aiHint": "futuristic city"
     },
@@ -157,7 +156,7 @@
       "id": "20",
       "name": "Playful Child",
       "description": "A child laughing and playing outdoors.",
-      "url": "https://picsum.photos/seed/20/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1OVmKjVRz4BCTD0OX1IqJsi2ptIrKM5po",
       "category": "portrait",
       "aiHint": "happy child"
     },
@@ -165,7 +164,7 @@
       "id": "21",
       "name": "Fractal Art",
       "description": "A complex and colorful fractal design.",
-      "url": "https://picsum.photos/seed/21/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1SOnwVPI9A6GnLfUJo3te0DKHhD5d_2cT",
       "category": "abstract",
       "aiHint": "fractal art"
     },
@@ -173,7 +172,7 @@
       "id": "22",
       "name": "Glacier Bay",
       "description": "Icebergs floating in a calm glacial bay.",
-      "url": "https://picsum.photos/seed/22/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1SUzTErZfZEc-Di09TTlEA2gRbT0R99wO",
       "category": "nature",
       "aiHint": "glacier ice"
     },
@@ -181,7 +180,7 @@
       "id": "23",
       "name": "Brutalist Design",
       "description": "The stark and imposing facade of a brutalist building.",
-      "url": "https://picsum.photos/seed/23/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1Wt_evGcgmN2k0mOUqcpJ9sR1VJ2YL7E-",
       "category": "architecture",
       "aiHint": "brutalist building"
     },
@@ -189,7 +188,7 @@
       "id": "24",
       "name": "Musician's Hands",
       "description": "Close-up of a musician's hands playing a guitar.",
-      "url": "https://picsum.photos/seed/24/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1YXjJe0t3cHk1D6mf5KUKJMRNVVzxQT9F",
       "category": "portrait",
       "aiHint": "playing guitar"
     },
@@ -197,7 +196,7 @@
       "id": "25",
       "name": "Paint Splash",
       "description": "A dynamic splash of multi-colored paint.",
-      "url": "https://picsum.photos/seed/25/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1aloQidPqcoXOgCzpzSHnRPa21mIL_795",
       "category": "abstract",
       "aiHint": "paint splash"
     },
@@ -205,7 +204,7 @@
       "id": "26",
       "name": "Volcanic Fields",
       "description": "The stark landscape of a volcanic field.",
-      "url": "https://picsum.photos/seed/26/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1bBUkAhXBsUaq2zWtDaH_dtdwyeDJp86z",
       "category": "nature",
       "aiHint": "volcanic rock"
     },
@@ -213,7 +212,7 @@
       "id": "27",
       "name": "Gothic Cathedral",
       "description": "The towering spires of a gothic cathedral.",
-      "url": "https://picsum.photos/seed/27/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1clM1mo9AfrOdvMJ1tWF4xjknqQbNgzUM",
       "category": "architecture",
       "aiHint": "gothic church"
     },
@@ -221,7 +220,7 @@
       "id": "28",
       "name": "Street Performer",
       "description": "A street performer captivating an audience.",
-      "url": "https://picsum.photos/seed/28/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1fJIcgsSZhp0m8jH8PuOMNVsqs4sS2jkP",
       "category": "portrait",
       "aiHint": "street artist"
     },
@@ -229,7 +228,7 @@
       "id": "29",
       "name": "Light Painting",
       "description": "Abstract light trails created with long exposure.",
-      "url": "https://picsum.photos/seed/29/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1hj9mnLL01NENUJbkMNLv-50RfmmCGyUf",
       "category": "abstract",
       "aiHint": "light trails"
     },
@@ -237,7 +236,7 @@
       "id": "30",
       "name": "Tropical Beach",
       "description": "A pristine tropical beach with white sand and clear water.",
-      "url": "https://picsum.photos/seed/30/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1jKmalFDCJyOBEMOa0Cpp7t76LVj3ADT8",
       "category": "nature",
       "aiHint": "tropical beach"
     },
@@ -245,7 +244,7 @@
       "id": "31",
       "name": "Skyscraper Worms Eye",
       "description": "Looking up at towering skyscrapers from below.",
-      "url": "https://picsum.photos/seed/31/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1jPAASp9CEOzJOPnbDueVQiHTe8qPnNTJ",
       "category": "architecture",
       "aiHint": "skyscraper view"
     },
@@ -253,7 +252,7 @@
       "id": "32",
       "name": "Athlete in Motion",
       "description": "A runner captured in a dynamic motion blur.",
-      "url": "https://picsum.photos/seed/32/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1jPzahvTvc2dy8_jS45KWV5yFyL6RSOrM",
       "category": "portrait",
       "aiHint": "runner motion"
     },
@@ -261,7 +260,7 @@
       "id": "33",
       "name": "Macro Water Droplet",
       "description": "A macro shot of a water droplet on a leaf.",
-      "url": "https://picsum.photos/seed/33/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1kmOENCIk_8OrLw16B0AfnJXbniLykb8R",
       "category": "nature",
       "aiHint": "water drop"
     },
@@ -269,7 +268,7 @@
       "id": "34",
       "name": "Smoke Art",
       "description": "Billowing smoke creating abstract shapes.",
-      "url": "https://picsum.photos/seed/34/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1m2InpIA6XzcB686iTMUYdjbJQ_Cg8fqt",
       "category": "abstract",
       "aiHint": "smoke abstract"
     },
@@ -277,7 +276,7 @@
       "id": "35",
       "name": "Modern Bridge",
       "description": "The clean lines of a modern suspension bridge.",
-      "url": "https://picsum.photos/seed/35/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1m6Q7c7u-UvtAv-Vl_nvXXPOTL7VrkBvr",
       "category": "architecture",
       "aiHint": "modern bridge"
     },
@@ -285,7 +284,7 @@
       "id": "36",
       "name": "Dancer's Pose",
       "description": "A graceful dancer holding a dramatic pose.",
-      "url": "https://picsum.photos/seed/36/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1nmbeDxCh1OpBXlu7UVshw6sjUXkgJiTK",
       "category": "portrait",
       "aiHint": "ballet dancer"
     },
@@ -293,7 +292,7 @@
       "id": "37",
       "name": "Canyon Vista",
       "description": "A vast canyon stretching out to the horizon.",
-      "url": "https://picsum.photos/seed/37/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1oD57UikzW95CAqVeCTI5CZP45vbrKdA3",
       "category": "nature",
       "aiHint": "grand canyon"
     },
@@ -301,7 +300,7 @@
       "id": "38",
       "name": "Oil on Canvas",
       "description": "An abstract texture of thick oil paint on canvas.",
-      "url": "https://picsum.photos/seed/38/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1oHayPgF0DYWhKj0owEajqDtRNlxrQi6K",
       "category": "abstract",
       "aiHint": "paint texture"
     },
@@ -309,7 +308,7 @@
       "id": "39",
       "name": "Rooftop Garden",
       "description": "A lush garden on the rooftop of a city building.",
-      "url": "https://picsum.photos/seed/39/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1oZCXfUfE16SV3XNNlDnWQckwN1kjiggD",
       "category": "architecture",
       "aiHint": "rooftop garden"
     },
@@ -317,7 +316,7 @@
       "id": "40",
       "name": "Reflective Gaze",
       "description": "A pensive portrait of a person looking into the distance.",
-      "url": "https://picsum.photos/seed/40/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1q310mvjhpqp8IxQ6uXctZVgZfuCCN0gP",
       "category": "portrait",
       "aiHint": "thoughtful person"
     },
@@ -325,7 +324,7 @@
       "id": "41",
       "name": "Misty Waterfall",
       "description": "A powerful waterfall shrouded in mist.",
-      "url": "https://picsum.photos/seed/mistywaterfall/1920/1080",
+      "url": "https://drive.google.com/uc?export=view&id=1tPawrYlsnMNTjxRH533t51Ti0hAyFTJk",
       "category": "nature",
       "aiHint": "waterfall mist"
     },
@@ -333,7 +332,7 @@
       "id": "42",
       "name": "Digital Glitch",
       "description": "An abstract image representing a digital glitch.",
-      "url": "https://picsum.photos/seed/42/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1vk_TgComjtYAacG3HrT-zd4RJnXaf3YC",
       "category": "abstract",
       "aiHint": "glitch art"
     },
@@ -341,7 +340,7 @@
       "id": "43",
       "name": "Ancient Temple",
       "description": "The ruins of an ancient temple at sunset.",
-      "url": "https://picsum.photos/seed/43/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1w-MZAqmWNx_z3tXtwgCjfN9KxyMe3ccK",
       "category": "architecture",
       "aiHint": "ancient temple"
     },
@@ -349,7 +348,7 @@
       "id": "44",
       "name": "Elder's Hands",
       "description": "A close-up showing the weathered hands of an elder.",
-      "url": "https://picsum.photos/seed/44/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1wl-qnJFL5FQsSjZRmexMT7s1NqmADiYj",
       "category": "portrait",
       "aiHint": "old hands"
     },
@@ -357,7 +356,7 @@
       "id": "45",
       "name": "Lightning Storm",
       "description": "A dramatic lightning strike over a dark landscape.",
-      "url": "https://picsum.photos/seed/45/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1wsu6y41x7i-TbLcvS5-B-XX0Wv-VRgC0",
       "category": "nature",
       "aiHint": "lightning storm"
     },
@@ -365,7 +364,7 @@
       "id": "46",
       "name": "Cracked Paint",
       "description": "An abstract close-up of cracked and peeling paint.",
-      "url": "https://picsum.photos/seed/46/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1x1_rvAnbNS3GMrNcwIvQSzfecZXYQlZv",
       "category": "abstract",
       "aiHint": "cracked paint"
     },
@@ -373,7 +372,7 @@
       "id": "47",
       "name": "Subway Tunnel",
       "description": "A view down a long, empty subway tunnel.",
-      "url": "https://picsum.photos/seed/47/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1xBrBjoRlyY28ZWXo-rSRb0hE3OvU5W-k",
       "category": "architecture",
       "aiHint": "subway tunnel"
     },
@@ -381,7 +380,7 @@
       "id": "48",
       "name": "Fire Performer",
       "description": "A portrait of a performer manipulating fire.",
-      "url": "https://picsum.photos/seed/48/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1xQ6XwX8in1UlfazfceMNcrWEVy8FqntG",
       "category": "portrait",
       "aiHint": "fire dancer"
     },
@@ -389,7 +388,7 @@
       "id": "49",
       "name": "Redwood Canopy",
       "description": "Looking up at the canopy of giant redwood trees.",
-      "url": "https://picsum.photos/seed/49/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1xcHz3JHW2w4kHVdDxwWddNFSVeLJkPPs",
       "category": "nature",
       "aiHint": "redwood forest"
     },
@@ -397,7 +396,7 @@
       "id": "50",
       "name": "Rusted Metal",
       "description": "An abstract texture of rusted metal.",
-      "url": "https://picsum.photos/seed/50/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1yl6axyN8egrwoouGVXZfqHtSjPnxWqy1",
       "category": "abstract",
       "aiHint": "rust texture"
     },
@@ -405,7 +404,7 @@
       "id": "51",
       "name": "Library Aisles",
       "description": "Rows of books in a grand old library.",
-      "url": "https://picsum.photos/seed/51/800/600",
+      "url": "https://drive.google.com/uc?export=view&id=1zFTEq53EKF_6CDcdtEvEGPdTF0IFZ9-m",
       "category": "architecture",
       "aiHint": "library books"
     },
@@ -413,33 +412,9 @@
       "id": "52",
       "name": "Silhouette",
       "description": "A striking silhouette of a person against a sunset.",
-      "url": "https://picsum.photos/seed/52/600/800",
+      "url": "https://drive.google.com/uc?export=view&id=1ziHCEcMGNh_6Rd_tS7aV69iqJkM0uJxl",
       "category": "portrait",
       "aiHint": "sunset silhouette"
-    },
-    {
-      "id": "53",
-      "name": "Crystal Cave",
-      "description": "Inside a sparkling crystal cave.",
-      "url": "https://picsum.photos/seed/53/800/600",
-      "category": "nature",
-      "aiHint": "crystal cave"
-    },
-    {
-      "id": "54",
-      "name": "Watercolor Blend",
-      "description": "An abstract blend of watercolor paints.",
-      "url": "https://picsum.photos/seed/54/800/600",
-      "category": "abstract",
-      "aiHint": "watercolor texture"
-    },
-    {
-      "id": "55",
-      "name": "Industrial Loft",
-      "description": "The interior of a spacious industrial loft apartment.",
-      "url": "https://picsum.photos/seed/55/800/600",
-      "category": "architecture",
-      "aiHint": "industrial loft"
     }
   ]
 }
