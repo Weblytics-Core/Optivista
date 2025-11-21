@@ -10,7 +10,7 @@ export default function TermsOfServicePage() {
           <div>
             <h2 className="text-2xl font-semibold font-headline">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using this website, you confirm that you are at least 18 years old (or have parental consent) and agree to comply with all stated terms and applicable laws. If you disagree, please do not use our site or services.
+              By accessing or using this website, you confirm that you agree to comply with all stated terms and applicable laws. If you disagree, please do not use our site or services.
             </p>
           </div>
 
