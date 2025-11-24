@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image, { type ImageProps } from 'next/image';
+import { cn } from '@/lib/utils';
 
 interface WatermarkedImageProps extends ImageProps {
   watermarkText: string;
@@ -25,8 +26,8 @@ export function WatermarkedImage({ watermarkText, watermarkEnabled = false, clas
   }, [watermarkEnabled]);
 
   return (
-    <div className="relative w-full h-full">
-      <Image className={className} {...props} />
+    <div className={cn("relative w-full h-full overflow-hidden", className?.includes('rounded') && 'rounded-lg')}>
+      <Image {...props} className={cn("w-full h-full", props.fill ? "object-cover" : "object-contain")} />
       {watermarkEnabled && (
         <div
           className="absolute pointer-events-none text-white/30 font-headline text-sm md:text-base transition-all duration-500 ease-in-out select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"

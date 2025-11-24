@@ -135,12 +135,11 @@ export function ImageDetailDialog({ images, initialIndex, onClose }: ImageDetail
         <DialogHeader className="sr-only">
           <DialogTitle>{image.name}</DialogTitle>
         </DialogHeader>
-        <div className="relative flex-1 flex items-center justify-center bg-black/90">
+        <div className="relative flex-1 flex items-center justify-center bg-black/90 p-4">
              <WatermarkedImage 
                 src={processImageUrl(image.url)}
                 alt={image.name}
                 fill
-                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 80vw"
                 data-ai-hint={image.aiHint}
                 watermarkText="Optivista"
