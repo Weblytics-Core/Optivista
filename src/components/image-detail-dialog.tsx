@@ -2,7 +2,6 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -16,6 +15,7 @@ import { processImageUrl } from '@/lib/utils';
 import { useUser, useFirestore, addDocumentNonBlocking, useDoc, useMemoFirebase } from '@/firebase';
 import { collection, serverTimestamp, doc } from 'firebase/firestore';
 import { useToast } from '@/hooks/use-toast';
+import { WatermarkedImage } from './watermarked-image';
 
 interface ImageDetailDialogProps {
   images: SiteImage[];
@@ -136,13 +136,15 @@ export function ImageDetailDialog({ images, initialIndex, onClose }: ImageDetail
           <DialogTitle>{image.name}</DialogTitle>
         </DialogHeader>
         <div className="relative flex-1 flex items-center justify-center bg-black/90">
-             <Image 
+             <WatermarkedImage 
                 src={processImageUrl(image.url)}
                 alt={image.name}
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 80vw"
                 data-ai-hint={image.aiHint}
+                watermarkText="Optivista"
+                watermarkEnabled={true}
               />
 
             {canGoPrev && (

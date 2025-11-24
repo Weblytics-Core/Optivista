@@ -9,6 +9,7 @@
   import type { SiteImage } from '@/lib/types';
   import { ContactForm } from '@/components/contact-form';
   import { processImageUrl } from '@/lib/utils';
+  import { WatermarkedImage } from '@/components/watermarked-image';
 
   export const metadata: Metadata = {
     title: 'Optivista',
@@ -22,13 +23,15 @@
     return (
       <div className="flex flex-col min-h-[calc(100vh-4rem)]">
         <section className="relative w-full h-[60vh] md:h-[75vh] flex items-center justify-center text-center text-white">
-          <Image
+          <WatermarkedImage
             src={processImageUrl(heroImage.url)}
             alt={heroImage.name}
             fill
             className="object-cover"
             priority
             data-ai-hint={heroImage.aiHint}
+            watermarkText="Optivista"
+            watermarkEnabled={false}
           />
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 p-4 flex flex-col items-center">
@@ -59,13 +62,15 @@
                 <Card key={image.id} className="overflow-hidden group transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                   <CardContent className="p-0">
                     <div className="aspect-[4/3] relative">
-                      <Image
+                      <WatermarkedImage
                         src={processImageUrl(image.url)}
                         alt={image.name}
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         data-ai-hint={image.aiHint}
+                        watermarkText="Optivista"
+                        watermarkEnabled={false}
                       />
                     </div>
                     <div className="p-4 bg-card">
