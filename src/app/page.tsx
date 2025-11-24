@@ -10,8 +10,6 @@
   import { ContactForm } from '@/components/contact-form';
   import { processImageUrl } from '@/lib/utils';
   import { WatermarkedImage } from '@/components/watermarked-image';
-  import { collection, getDocs } from 'firebase/firestore';
-  import { getAdminFirestore } from '@/firebase/server';
 
   export const metadata: Metadata = {
     title: 'Optivista',
