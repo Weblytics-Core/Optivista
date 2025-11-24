@@ -51,8 +51,6 @@ async function getSettings(): Promise<Settings> {
       siteName: 'Optivista',
       heroHeadline:
         'Discover stunning, high-resolution photography from around the world.',
-      heroSubheadline:
-        'Explore our curated collection of fine art photography. Ready for your next project.',
     };
   }
 }
