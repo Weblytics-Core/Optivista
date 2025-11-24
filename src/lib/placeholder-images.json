@@ -2,19 +2,19 @@
   "placeholderImages": [
     {
       "id": "1",
-      "name": "Mountain Sunrise",
-      "description": "A breathtaking view of the sun rising over a misty mountain range.",
+      "name": "Ooty Tea Garden Landscape",
+      "description": "A vibrant, lush green landscape featuring manicured gardens and distant misty mountains in Ooty, India.",
       "url": "https://drive.google.com/uc?export=view&id=10ebKjm_dVud8ySPuQzfPaaKfcFoQIHPW",
-      "category": "nature",
-      "aiHint": "mountain landscape"
+      "category": "landscape",
+      "aiHint": "Ooty Tea Garden Landscape"
     },
     {
       "id": "2",
-      "name": "Urban Reflections",
-      "description": "A modern skyscraper reflecting the city lights on its glass facade.",
+      "name": "Monolithic Nandi Bull Statue",
+      "description": "A majestic monolithic statue of Nandi Bull carved from a single rock, set against a clear blue sky.",
       "url": "https://drive.google.com/uc?export=view&id=11j5Ynm4sCW62Zqd17NI5eIraDTAU-tWt",
       "category": "architecture",
-      "aiHint": "city building"
+      "aiHint": "monolithic nandi bull statue"
     },
     {
       "id": "3",
@@ -74,83 +74,83 @@
     },
     {
       "id": "10",
-      "name": "Coastal Waves",
-      "description": "Powerful ocean waves crashing against a rocky shoreline.",
+      "name": "Vibrant Yellow Hibiscus Flower",
+      "description": "A close-up of a vibrant yellow hibiscus flower in full bloom.",
       "url": "https://drive.google.com/uc?export=view&id=175JRzmjq1kTj9Buci7kXzn79OZtfTUp_",
       "category": "nature",
-      "aiHint": "ocean waves"
+      "aiHint": "yellow hibiscus flower"
     },
     {
       "id": "11",
-      "name": "Geometric Patterns",
-      "description": "A mesmerizing abstract photo of repeating geometric shapes.",
+      "name": " White Chrysanthemum Flowers",
+      "description": "A close-up of delicate white chrysanthemum flowers in full bloom.",
       "url": "https://drive.google.com/uc?export=view&id=17CzkT_nMrOjxKRe3E_Plq3xFjP3Qin4z",
-      "category": "abstract",
-      "aiHint": "geometric abstract"
+      "category": "nature",
+      "aiHint": "white chrysanthemum flowers"
     },
     {
       "id": "12",
-      "name": "Stairway to Nowhere",
-      "description": "A spiral staircase in an abandoned building, creating a sense of mystery.",
+      "name": "Victoria Memorial Hall: Kolkata's Iconic White Marble Landmark",
+      "description": "The majestic Victoria Memorial Hall in Kolkata, India, showcasing its stunning white marble architecture against a clear blue sky.",
       "url": "https://drive.google.com/uc?export=view&id=1ACRYxQ2LzoH_42NvlA814j1Twk5sNHBp",
       "category": "architecture",
-      "aiHint": "spiral staircase"
+      "aiHint": "white marble architecture"
     },
     {
       "id": "13",
-      "name": "Northern Lights",
-      "description": "The vibrant colors of the Aurora Borealis in the night sky.",
+      "name": "Vidhana Soudha: Seat of Karnataka Government",
+      "description": "The majestic Vidhana Soudha in Bangalore, India, an impressive example of neo-Dravidian architecture.",
       "url": "https://drive.google.com/uc?export=view&id=1A_wbCRSKCPnqwZ12BAukkvSOxLEphCLr",
-      "category": "nature",
-      "aiHint": "aurora borealis"
+      "category": "architecture",
+      "aiHint": "neo-Dravidian architecture"
     },
     {
       "id": "14",
-      "name": "Ink in Water",
-      "description": "Abstract capture of black ink diffusing in clear water.",
+      "name": "Ornate Interior of the Mysore Palace",
+      "description": "The richly decorated interior of the Mysore Palace, showcasing intricate designs and grandeur.",
       "url": "https://drive.google.com/uc?export=view&id=1BkLH0INRJBvV-YnW5Fe82S9pRZltjSQn",
-      "category": "abstract",
-      "aiHint": "ink water"
+      "category": "architecture",
+      "aiHint": "ornate palace interior"
     },
     {
       "id": "15",
-      "name": "Elder's Wisdom",
-      "description": "A powerful portrait capturing the wisdom in an elderly person's eyes.",
+      "name": "Sunset Over the Horizon",
+      "description": "A vibrant sky with dramatic clouds illuminates the horizon above a distant city skyline during sunset.",
       "url": "https://drive.google.com/uc?export=view&id=1CRXRsRxLfsT0BAlkJdyDUnr9UsMu3372",
-      "category": "portrait",
-      "aiHint": "old man"
+      "category": "landscape",
+      "aiHint": "sunset horizon"
     },
     {
       "id": "16",
-      "name": "Suspension Bridge",
-      "description": "A long suspension bridge disappearing into the fog.",
+      "name": "Chocolate Chip Sea Star in an Aquarium",
+      "description": "A close-up of a chocolate chip sea star resting on the sandy bottom of an aquarium.",
       "url": "https://drive.google.com/uc?export=view&id=1EPzRACeZFtkEaoiAyNqgzysxwhNLuOp7",
-      "category": "architecture",
-      "aiHint": "foggy bridge"
+      "category": "nature",
+      "aiHint": "chocolate chip sea star"
     },
     {
       "id": "17",
-      "name": "Cosmic Cloud",
-      "description": "A colorful nebula in deep space.",
+      "name": "Government Botanical Garden, Ooty",
+      "description": "A lush, green expanse in Ooty, India, featuring a historic stone pillar and vibrant plant life, set against a backdrop of misty hills.",
       "url": "https://drive.google.com/uc?export=view&id=1LIo4ZspacekWp6VRGO9VNMcQA6gO7xop",
-      "category": "abstract",
-      "aiHint": "galaxy space"
+      "category": "nature",
+      "aiHint": "botanical garden"
     },
     {
       "id": "18",
-      "name": "Autumn Lane",
-      "description": "A road covered in autumn leaves.",
+      "name": "White Butterfly on Green Leaf",
+      "description": "A close-up of a white butterfly resting on a green leaf.",
       "url": "https://drive.google.com/uc?export=view&id=1LQP7gr2ow428f21Zn--ENP0nZTMgKy3I",
       "category": "nature",
-      "aiHint": "autumn road"
+      "aiHint": "white butterfly on leaf"
     },
     {
       "id": "19",
-      "name": "Future City",
-      "description": "A futuristic city skyline at night.",
+      "name": "Golden Sunset Over Calm Water",
+      "description": "A golden sunset reflecting over calm water with a serene atmosphere.",
       "url": "https://drive.google.com/uc?export=view&id=1MB1dwnAAHw2K702pGn3zgthX078gVk9n",
-      "category": "architecture",
-      "aiHint": "futuristic city"
+      "category": "landscape",
+      "aiHint": "golden sunset calm water"
     },
     {
       "id": "20",
