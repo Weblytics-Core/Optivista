@@ -33,12 +33,13 @@ export function initializeFirebase() {
   return getSdks(getApp());
 }
 
-export function getSdks(firebaseApp: FirebaseApp) {
+export function getSdks(firebaseApp?: FirebaseApp) {
+  const app = firebaseApp || (getApps().length ? getApp() : initializeApp(firebaseConfig));
   return {
-    firebaseApp,
-    auth: getAuth(firebaseApp),
-    firestore: getFirestore(firebaseApp),
-    storage: getStorage(firebaseApp)
+    firebaseApp: app,
+    auth: getAuth(app),
+    firestore: getFirestore(app),
+    storage: getStorage(app)
   };
 }
 
