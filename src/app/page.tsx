@@ -10,6 +10,7 @@ import { ContactForm } from '@/components/contact-form';
 import { processImageUrl } from '@/lib/utils';
 import { WatermarkedImage } from '@/components/watermarked-image';
 import { getAdminFirestore } from '@/firebase/server';
+import { collection, getDocs, QueryDocumentSnapshot, DocumentData } from 'firebase-admin/firestore';
 
 export const metadata: Metadata = {
   title: 'Optivista',
@@ -20,11 +21,11 @@ async function getSettings() {
   try {
     const firestore = getAdminFirestore();
     const configSnapshot = await getDocs(collection(firestore, 'configurations'));
-    const settings = configSnapshot.docs.reduce((acc, doc) => {
+    const settings = configSnapshot.docs.reduce((acc: Record<string, string>, doc: QueryDocumentSnapshot<DocumentData>) => {
       const data = doc.data();
       acc[data.key] = data.value;
       return acc;
-    }, {} as Record<string, string>);
+    }, {});
     return settings;
   } catch (error) {
     console.error("Failed to fetch settings:", error);
@@ -32,7 +33,7 @@ async function getSettings() {
     return {
       siteName: 'Optivista',
       heroHeadline: 'Discover stunning, high-resolution photography from around the world.',
-      heroSubheadline: 'Explore our curated collection of fine art photography.',
+      heroSubheadline: 'Explore our curated collection of fine art photography. Ready for your next project.',
     };
   }
 }
