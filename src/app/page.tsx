@@ -33,8 +33,8 @@ async function getSettings() {
     // Return default settings on error
     return {
       siteName: 'Optivista',
-      heroHeadline: 'Discover stunning, high-resolution photography from around the world.',
-      heroSubheadline: 'Explore our curated collection of fine art photography. Ready for your next project.',
+      heroHeadline: 'Discover stunning, high-resolution photography from around India.',
+      heroSubheadline: 'Explore our curated collection of fine art photography.',
     };
   }
 }
@@ -45,12 +45,10 @@ export default async function Home() {
   const settings = await getSettings();
 
   const siteName = settings.siteName || 'Optivista';
-  const heroHeadline = settings.heroHeadline || 'Discover stunning, high-resolution photography from around the world.';
-  const heroSubheadline = settings.heroSubheadline || 'Explore our curated collection of fine art photography.';
 
   return (
     <>
-      <section className="relative w-full h-[calc(100vh-4rem)]">
+      <section className="relative w-full h-[60vh] min-h-[400px] max-h-[800px] flex items-center justify-center">
         <div className="absolute inset-0">
           <WatermarkedImage
             src={processImageUrl(heroImage.url)}
@@ -62,6 +60,7 @@ export default async function Home() {
             watermarkText={siteName}
             watermarkEnabled={false}
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
         </div>
       </section>
 
