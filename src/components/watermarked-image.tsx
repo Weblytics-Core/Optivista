@@ -8,9 +8,10 @@ import { cn } from '@/lib/utils';
 interface WatermarkedImageProps extends ImageProps {
   watermarkText: string;
   watermarkEnabled?: boolean;
+  objectFit?: 'cover' | 'contain';
 }
 
-export function WatermarkedImage({ watermarkText, watermarkEnabled = false, className, ...props }: WatermarkedImageProps) {
+export function WatermarkedImage({ watermarkText, watermarkEnabled = false, className, objectFit = 'contain', ...props }: WatermarkedImageProps) {
   const [position, setPosition] = useState({ top: '10%', left: '10%' });
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export function WatermarkedImage({ watermarkText, watermarkEnabled = false, clas
 
   return (
     <div className={cn("relative w-full h-full overflow-hidden bg-black/5", className?.includes('rounded') && 'rounded-lg')}>
-      <Image {...props} className={cn("w-full h-full", props.fill ? "object-contain" : "")} />
+      <Image {...props} className={cn("w-full h-full", objectFit === 'cover' ? 'object-cover' : 'object-contain')} />
       {watermarkEnabled && (
         <div
           className="absolute pointer-events-none text-white/30 font-headline text-sm md:text-base transition-all duration-500 ease-in-out select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"

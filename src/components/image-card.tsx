@@ -22,7 +22,8 @@ export function ImageCard({ image, onImageClick }: ImageCardProps) {
             alt={image.name}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+            className="transition-transform duration-300 ease-in-out group-hover:scale-105"
+            objectFit="cover"
             data-ai-hint={image.aiHint}
             watermarkText="Optivista"
             watermarkEnabled={false}
