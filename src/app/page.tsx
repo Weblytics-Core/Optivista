@@ -66,7 +66,7 @@ export default async function Home() {
   const siteName = settings.siteName || 'Optivista';
   const heroHeadline =
     settings.heroHeadline ||
-    'Discover stunning, high-resolution photography from around the world.';
+    'Discover stunning, high-resolution photography from around India.';
   const heroSubheadline =
     settings.heroSubheadline ||
     'Explore our curated collection of fine art photography.';
