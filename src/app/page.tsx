@@ -50,7 +50,7 @@ async function getSettings(): Promise<Settings> {
     return {
       siteName: 'Optivista',
       heroHeadline:
-        'Discover stunning, high-resolution photography from around the world.',
+        'Discover stunning, high-resolution photography from around India.',
     };
   }
 }
