@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Camera } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import imageData from '@/lib/placeholder-images.json';
 import type { SiteImage } from '@/lib/types';
@@ -10,7 +9,7 @@ import { ContactForm } from '@/components/contact-form';
 import { processImageUrl } from '@/lib/utils';
 import { WatermarkedImage } from '@/components/watermarked-image';
 import { getAdminFirestore } from '@/firebase/server';
-import { collection, getDocs, QueryDocumentSnapshot, DocumentData } from 'firebase-admin/firestore';
+import type { QueryDocumentSnapshot, DocumentData } from 'firebase-admin/firestore';
 
 export const metadata: Metadata = {
   title: 'Optivista',
@@ -20,10 +19,12 @@ export const metadata: Metadata = {
 async function getSettings() {
   try {
     const firestore = getAdminFirestore();
-    const configSnapshot = await getDocs(collection(firestore, 'configurations'));
+    const configSnapshot = await firestore.collection('configurations').get();
     const settings = configSnapshot.docs.reduce((acc: Record<string, string>, doc: QueryDocumentSnapshot<DocumentData>) => {
       const data = doc.data();
-      acc[data.key] = data.value;
+      if (data.key && typeof data.value !== 'undefined') {
+        acc[data.key] = data.value;
+      }
       return acc;
     }, {});
     return settings;
@@ -50,16 +51,18 @@ export default async function Home() {
   return (
     <>
       <section className="relative w-full h-[calc(100vh-4rem)]">
-        <WatermarkedImage
-          src={processImageUrl(heroImage.url)}
-          alt={heroImage.name}
-          fill
-          objectFit="cover"
-          priority
-          data-ai-hint={heroImage.aiHint}
-          watermarkText={siteName}
-          watermarkEnabled={false}
-        />
+        <div className="absolute inset-0">
+          <WatermarkedImage
+            src={processImageUrl(heroImage.url)}
+            alt={heroImage.name}
+            fill
+            objectFit="cover"
+            priority
+            data-ai-hint={heroImage.aiHint}
+            watermarkText={siteName}
+            watermarkEnabled={false}
+          />
+        </div>
       </section>
 
       <div className="flex flex-col">
