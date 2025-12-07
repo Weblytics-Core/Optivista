@@ -1,7 +1,6 @@
 
 'use client';
 
-import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -9,15 +8,7 @@ import { FirebaseClientProvider } from '@/firebase';
 import Script from 'next/script';
 import { MainLayout } from '@/components/main-layout';
 import { useEffect } from 'react';
-
-// Metadata needs to be exported from a server component or at the page level.
-// Since we are making this a client component for the effect, we can't export it here.
-// It's better to move this to individual pages or keep a separate layout for metadata.
-// For now, as we make this a client component, we'll comment out the metadata object.
-// export const metadata: Metadata = {
-//   title: 'Optivista',
-//   description: 'A modern photography portfolio.',
-// };
+import type { Metadata } from 'next';
 
 export default function RootLayout({
   children,
@@ -55,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <title>Optivista</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,9 +11,13 @@ import { getAdminFirestore } from '@/firebase/server';
 import type { QueryDocumentSnapshot, DocumentData } from 'firebase-admin/firestore';
 
 export const metadata: Metadata = {
-  title: 'Optivista',
+  title: {
+    default: 'Optivista',
+    template: `%s | Optivista`,
+  },
   description: 'A modern photography portfolio.',
 };
+
 
 async function getSettings() {
   try {
