@@ -8,7 +8,6 @@ import { FirebaseClientProvider } from '@/firebase';
 import Script from 'next/script';
 import { MainLayout } from '@/components/main-layout';
 import { useEffect } from 'react';
-import type { Metadata } from 'next';
 
 export default function RootLayout({
   children,
@@ -33,7 +32,7 @@ export default function RootLayout({
         e.preventDefault();
       }
     };
-    
+
     document.addEventListener('contextmenu', handleContextMenu);
     document.addEventListener('keydown', handleKeyDown);
 
