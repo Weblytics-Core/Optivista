@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -49,6 +50,7 @@ const analyzeContentPrompt = ai.definePrompt({
   name: 'analyzeContentPrompt',
   input: { schema: ContactFormContentInputSchema },
   output: { schema: ContactFormContentOutputSchema },
+  model: 'gemini-2.5-flash',
   prompt: `You are an AI assistant specializing in analyzing contact form submissions to ensure they are appropriate and relevant for a business inquiry.
 
   Analyze the following contact form submission and determine if its content is appropriate and relevant.

@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -46,6 +47,7 @@ const analyzeSentimentPrompt = ai.definePrompt({
   name: 'analyzeSentimentPrompt',
   input: { schema: ContactFormInputSchema },
   output: { schema: ContactFormOutputSchema },
+  model: 'gemini-2.5-flash',
   prompt: `You are an AI assistant specializing in analyzing contact form submissions.
 
   Analyze the following contact form submission and determine its sentiment, whether it is spam, and its urgency.
@@ -65,7 +67,7 @@ const analyzeSentimentPrompt = ai.definePrompt({
   - The message uses generic greetings or lacks personalization.
 
   Consider the following when determining urgency:
-  - High: The message reports a critical issue, security vulnerability, or requires immediate attention.
+  - High: The message reports a critical issue, a security vulnerability, or requires immediate attention.
   - Medium: The message requires a response within 24-48 hours or addresses a non-critical issue.
   - Low: The message is informational, a general inquiry, or can be addressed at your convenience.
 `,
