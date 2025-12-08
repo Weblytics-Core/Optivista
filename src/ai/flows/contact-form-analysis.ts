@@ -8,8 +8,9 @@
  * - ContactFormContentOutput - The return type for the analyzeContent function.
  */
 
-import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {defineFlow, AIFunction, run} from 'genkit/flow';
+import {model} from '@/ai/genkit';
+import {z} from 'zod';
 
 const ContactFormContentInputSchema = z.object({
   name: z.string().describe('The name of the person submitting the form.'),
@@ -31,17 +32,13 @@ export async function analyzeContent(
   return analyzeContentFlow(input);
 }
 
-const prompt = ai.definePrompt({
-  name: 'contactFormContentAnalysisPrompt',
-  input: {schema: ContactFormContentInputSchema},
-  output: {schema: ContactFormContentOutputSchema},
-  prompt: `You are an AI assistant specializing in analyzing contact form submissions to ensure they are appropriate and relevant for a business inquiry.
+const prompt = `You are an AI assistant specializing in analyzing contact form submissions to ensure they are appropriate and relevant for a business inquiry.
 
   Analyze the following contact form submission and determine if its content is appropriate and relevant.
 
-  Name: {{{name}}}
-  Email: {{{email}}}
-  Message: {{{message}}}
+  Name: {{name}}
+  Email: {{email}}
+  Message: {{message}}
 
   Provide your analysis in the following JSON format:
   {
@@ -58,17 +55,24 @@ const prompt = ai.definePrompt({
   - The message pertains to the website's purpose, products, or services.
   - The message is a genuine inquiry or request for information.
   - The message is not spam or promotional content.
-`,
-});
+`;
 
-const analyzeContentFlow = ai.defineFlow(
+const analyzeContentFlow: AIFunction<typeof ContactFormContentInputSchema, typeof ContactFormContentOutputSchema> = defineFlow(
   {
     name: 'analyzeContentFlow',
     inputSchema: ContactFormContentInputSchema,
     outputSchema: ContactFormContentOutputSchema,
   },
-  async input => {
-    const {output} = await prompt(input);
-    return output!;
+  async (input) => {
+    const llmResponse = await model.generate({
+      prompt: prompt,
+      input,
+      output: {
+        format: 'json',
+        schema: ContactFormContentOutputSchema,
+      },
+    });
+
+    return llmResponse.output()!;
   }
 );
