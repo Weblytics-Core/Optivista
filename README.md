@@ -65,7 +65,7 @@
 ## 🏗️ Architecture & Tech Stack
 
 ### **Frontend Technologies**
-- **Framework:** Next.js 15.0.0 (React 18.3.1)
+- **Framework:** Next.js 15.5.7 (React 18.3.1)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **UI Components:** Radix UI (15+ component libraries)
@@ -221,12 +221,25 @@ Optivista/
 ## 🔧 Configuration & Setup
 
 ### **Environment Variables**
-```typescript
-- projectId: FIREBASE_PROJECT_ID
-- apiKey: FIREBASE_API_KEY
-- authDomain: FIREBASE_AUTH_DOMAIN
-- storageBucket: FIREBASE_STORAGE_BUCKET
-- messagingSenderId: FIREBASE_MESSAGING_SENDER_ID
+```bash
+# Firebase Configuration
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+GOOGLE_GENAI_API_KEY=your-google-genai-api-key
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your-recaptcha-site-key
+NEXT_PUBLIC_CONTACT_EMAIL=contact@example.com
+NEXT_PUBLIC_BASE_URL=https://your-domain.com
+```
+```
+**Setup Instructions:**
+1. Create a `.env.local` file in the project root
+2. Copy the template above and replace placeholder values
+3. Obtain Firebase credentials from Firebase Console
+4. Get Google Generative AI key from Google AI Studio
+5. Configure reCAPTCHA keys from Google reCAPTCHA Admin Console
 ```
 
 ### **Next.js Configuration**
@@ -407,7 +420,7 @@ npm run postinstall # Apply patches from patch-package
 ## 📦 Dependencies Overview
 
 ### Core Framework
-- `next@15.0.0` - React framework
+- `next@15.5.7` - React framework
 - `react@18.3.1` - UI library
 - `typescript` - Type safety
 
@@ -533,5 +546,5 @@ For inquiries or issues, use the contact form at `/contact` on the live website.
 
 ---
 
-**Last Updated:** November 2025  
+**Last Updated:** December 2025  
 **Project Status:** 🚀 Active Development
