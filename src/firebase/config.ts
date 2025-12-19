@@ -1,7 +1,3 @@
-
-// Firebase configuration is read from environment variables to avoid
-// committing sensitive values to the repository. For client-side
-// usage in Next.js these values should be prefixed with NEXT_PUBLIC_
 export const firebaseConfig = {
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || '',
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '',
