@@ -1,10 +1,22 @@
 
+// Firebase configuration is read from environment variables to avoid
+// committing sensitive values to the repository. For client-side
+// usage in Next.js these values should be prefixed with NEXT_PUBLIC_
 export const firebaseConfig = {
-  "projectId": "studio-3824505275-ca00d",
-  "appId": "1:344699456975:web:b696a920e2b0dc74e196ba",
-  "apiKey": "AIzaSyCmwwNdDST4yggN3shq2TVq-pPIM4uzhag",
-  "authDomain": "studio-3824505275-ca00d.firebaseapp.com",
-  "storageBucket": "studio-3824505275-ca00d.appspot.com",
-  "measurementId": "",
-  "messagingSenderId": "344699456975"
-};
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || '',
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '',
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '',
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || '',
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || '',
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || '',
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || ''
+} as const;
+
+// Warn in development when env vars are missing to help debugging
+if (process.env.NODE_ENV !== 'production') {
+  const missing = Object.entries(firebaseConfig).filter(([, v]) => !v).map(([k]) => k);
+  if (missing.length) {
+    // eslint-disable-next-line no-console
+    console.warn('[firebase] missing environment variables:', missing.join(', '));
+  }
+}
