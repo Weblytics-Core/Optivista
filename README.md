@@ -90,11 +90,6 @@
 - **Type Checking:** TypeScript strict mode
 - **Patch Management:** Patch Package
 
-### **Deployment**
-- **Hosting:** Firebase App Hosting
-- **Configuration:** apphosting.yaml
-- **Output:** Standalone Next.js application
-
 ---
 
 ## 📁 Project Structure
