@@ -70,7 +70,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Camera className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg tracking-wide">Optivista</span>
+          <span className="font-bold font-headline text-lg tracking-wide">Subhadip Ghosh</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -164,7 +164,7 @@ export function SiteHeader() {
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
                 <Camera className="h-6 w-6 text-primary" />
-                <span className="font-bold font-headline text-lg tracking-wide">Optivista</span>
+                <span className="font-bold font-headline text-lg tracking-wide">Subhadip Ghosh</span>
               </Link>
               <nav className="flex flex-col space-y-4">
                 {navLinks.map(({ href, label, icon: Icon }) => (
