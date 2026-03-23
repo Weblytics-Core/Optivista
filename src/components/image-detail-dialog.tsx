@@ -142,7 +142,7 @@ export function ImageDetailDialog({ images, initialIndex, onClose }: ImageDetail
                 fill
                 sizes="(max-width: 768px) 100vw, 80vw"
                 data-ai-hint={image.aiHint}
-                watermarkText="Optivista"
+                watermarkText="Subhadip Ghosh"
                 watermarkEnabled={true}
               />
 
