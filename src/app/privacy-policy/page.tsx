@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="prose dark:prose-invert max-w-none space-y-6">
           <p>
-            At Optivista we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit or interact with our website.
+            We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit or interact with our website.
           </p>
           
           <div>
