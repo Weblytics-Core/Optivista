@@ -17,13 +17,13 @@ const PinterestIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 export function SiteFooter() {
-  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "optivista@subhadipghosh.co.in";
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "reach@subhadipghosh.co.in";
   return (
     <footer className="bg-background border-t">
       <div className="container mx-auto px-4 py-12 sm:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
           <div className="space-y-4 lg:col-span-2">
-            <h4 className="font-headline text-lg font-semibold tracking-wide">Optivista</h4>
+            <h4 className="font-headline text-lg font-semibold tracking-wide">Subhadip Ghosh</h4>
             <p className="text-muted-foreground">
               A modern photography portfolio to showcase and sell your work.
             </p>
@@ -70,7 +70,7 @@ export function SiteFooter() {
       </div>
       <div className="bg-muted/50 py-4">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Optivista By Subhadip Ghosh. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Subhadip Ghosh. All rights reserved.</p>
             <div className="flex space-x-4 mt-2 sm:mt-0">
                 <Link href="/privacy-policy" className="hover:text-foreground">Privacy Policy</Link>
                 <Link href="/terms-of-service" className="hover:text-foreground">Terms of Service</Link>
