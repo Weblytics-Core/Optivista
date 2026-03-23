@@ -25,7 +25,7 @@ export function ImageCard({ image, onImageClick }: ImageCardProps) {
             className="transition-transform duration-300 ease-in-out group-hover:scale-105"
             objectFit="cover"
             data-ai-hint={image.aiHint}
-            watermarkText="Optivista"
+            watermarkText="Subhadip Ghosh"
             watermarkEnabled={false}
           />
            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
