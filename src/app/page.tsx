@@ -10,8 +10,8 @@ import { WatermarkedImage } from '@/components/watermarked-image';
 
 export const metadata: Metadata = {
     title: {
-        default: 'Optivista',
-        template: `%s | Optivista`,
+        default: 'Subhadip Ghosh,
+        template: `%s | Subhadip Ghosh`,
     },
     description: 'A modern photography portfolio.',
 };
@@ -22,7 +22,7 @@ export default async function Home() {
 
     // Using default settings directly to avoid build errors
     const settings = {
-        siteName: 'Optivista',
+        siteName: 'Subhadip Ghosh,
         heroHeadline: 'Discover stunning, high-resolution photography from around India.',
         heroSubheadline: 'Explore our curated collection of fine art photography.',
     };
