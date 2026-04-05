@@ -1,10 +1,9 @@
-# Optivista - Modern Photography Portfolio
+# Modern Photography Portfolio
 
 ## 📸 Project Overview
 
-**Optivista** is a modern, full-stack photography portfolio web application built with cutting-edge web technologies. It serves as a sophisticated platform for showcasing high-resolution photography, managing image galleries, and engaging with visitors through contact forms. The application combines a beautiful frontend interface with powerful backend capabilities powered by Firebase and AI-driven features.
+**A modern, full-stack photography portfolio web application built with cutting-edge web technologies. It serves as a sophisticated platform for showcasing high-resolution photography, managing image galleries, and engaging with visitors through contact forms. The application combines a beautiful frontend interface with powerful backend capabilities powered by Firebase and AI-driven features.
 
-**Project Name:** Optivista  
 **Version:** 0.1.0  
 **Type:** Full-Stack Web Application  
 **Status:** Active Development
